@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DuplicatesBenchmark.DuplicatesBenchmark-20230704-003046</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 11 (10.0.22621.1702/22H2/2022Update/SunValley2)
+11th Gen Intel Core i7-1165G7 2.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.203
+  [Host]     : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.5 (7.0.523.17405), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>                  Method</th><th>DataSize</th><th>  Mean</th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>ContainsDuplicatesWithDistinct</td><td>10</td><td>119.6 ns</td><td>2.32 ns</td><td>2.58 ns</td><td>118.9 ns</td>
+</tr><tr><td>ContainsDuplicatesWithHashSet</td><td>10</td><td>182.2 ns</td><td>2.68 ns</td><td>2.51 ns</td><td>183.0 ns</td>
+</tr><tr><td>ContainsDuplicatesWithDistinct</td><td>100</td><td>849.4 ns</td><td>16.45 ns</td><td>21.39 ns</td><td>846.2 ns</td>
+</tr><tr><td>ContainsDuplicatesWithHashSet</td><td>100</td><td>1,408.6 ns</td><td>25.90 ns</td><td>20.22 ns</td><td>1,405.4 ns</td>
+</tr><tr><td>ContainsDuplicatesWithDistinct</td><td>1000</td><td>7,611.8 ns</td><td>99.79 ns</td><td>77.91 ns</td><td>7,607.6 ns</td>
+</tr><tr><td>ContainsDuplicatesWithHashSet</td><td>1000</td><td>13,299.1 ns</td><td>263.40 ns</td><td>599.89 ns</td><td>13,051.8 ns</td>
+</tr><tr><td>ContainsDuplicatesWithDistinct</td><td>10000</td><td>111,315.9 ns</td><td>1,663.52 ns</td><td>3,205.03 ns</td><td>110,377.0 ns</td>
+</tr><tr><td>ContainsDuplicatesWithHashSet</td><td>10000</td><td>180,427.2 ns</td><td>3,516.57 ns</td><td>5,154.55 ns</td><td>179,076.2 ns</td>
+</tr></tbody></table>
+</body>
+</html>
